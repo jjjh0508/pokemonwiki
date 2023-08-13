@@ -1,3 +1,9 @@
+<script>
+    import { arrPokemon } from '../stores/pokestore'
+    console.log($arrPokemon);
+</script>
+
+
 <svelte:head>
     <title>포켓몬 위키</title>
 </svelte:head>
@@ -6,3 +12,6 @@
    포켓몬 위키
 </h1>
 
+{#each $arrPokemon as pokemon}
+<p>{pokemon.name}</p>
+{/each}
